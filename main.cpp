@@ -24,7 +24,7 @@ void szkola::wprowadz()
    cin  >> ilosc_klas;
    for (int i=0; i<ilosc_klas; i++)
    {
-      cout << "Podaj nazwe klasy: ";
+      cout << "Nazwa klasy: ";
       cin >> wprowadz1.klasa;
       spis.push_back(wprowadz1); 
    }
