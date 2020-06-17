@@ -12,17 +12,10 @@ class szkola
 {
    vector <struct klasy> spis;
    public:
-   void wypisz();
    void wprowadz();
+   void wypisz();
    void zapiszDoPliku(const char *);              
 };
-void szkola::wypisz()
-{
-   for (vector<struct klasy>::iterator it = spis.begin(); it != spis.end(); ++it)
-      {
-       cout << it->klasa << "\n";
-      }
-}
 void szkola::wprowadz()
 {
    int ilosc_klas;
@@ -35,6 +28,13 @@ void szkola::wprowadz()
       cin >> wprowadz1.klasa;
       spis.push_back(wprowadz1); 
    }
+}
+void szkola::wypisz()
+{
+   for (vector<struct klasy>::iterator it = spis.begin(); it != spis.end(); ++it)
+      {
+      cout << it->klasa << "\n";
+      }
 }
 void szkola::zapiszDoPliku(const char *nazwa)
 {
